@@ -1,16 +1,14 @@
 import { Given, Then, When } from '@badeball/cypress-cucumber-preprocessor';
+import { PageHome } from '../../pages/page-home';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function
 Given('I open the home page', () => {
-
+  PageHome.open()
 })
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function
 When('I submit the login form', () => {
-
+  PageHome.login()
 })
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function
 Then('I see my profile page', () => {
-
+  PageHome.seeProfile()
 })
