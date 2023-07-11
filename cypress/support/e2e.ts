@@ -22,6 +22,9 @@ function login(): void {
       cy.setCookie('some', 'thing')
 
       // fill and submit the form
+
+      // for example, we can check the location
+      // cy.location.then(location => location.host)
     },
     {
       cacheAcrossSpecs: true,

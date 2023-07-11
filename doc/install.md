@@ -8,7 +8,7 @@ pnpm cypress install
 #### Install typescript
 
 ```bash
-pnpm add typescript
+pnpm add typescript cross-env
 ```
 
 #### Install eslint and prettier

@@ -8,6 +8,7 @@
     "c:run": "cypress run --headed --browser chrome",
     "c:run:headless": "cypress run --headless --browser chrome",
     "c:open": "cypress open --e2e --browser chrome",
+    "c:open:local": "cross-env CYPRESS_BASE_URL=http://localhost:3000 cypress open --e2e --browser chrome",
     "prettier-format": "prettier --write . && git add --all",
     "lint": "eslint ."
   },
@@ -41,6 +42,7 @@
     "@cypress/browserify-preprocessor": "3.0.2",
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/parser": "5.61.0",
+    "cross-env": "7.0.3",
     "cypress": "12.17.0",
     "eslint": "8.44.0",
     "eslint-config-prettier": "8.8.0",
