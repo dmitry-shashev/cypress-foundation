@@ -65,15 +65,15 @@ Cypress.Commands.add(
     const prev = cy.wrap(prevSubject)
     prev.focus()
     if (!value) {
-      prev.clear()
+      prev.wait(50).clear().wait(50)
       return
     }
-    prev.clear().type(value)
+    prev.wait(50).clear().wait(50).type(value)
   }
 )
 
 Cypress.Commands.add(
-  'haveText',
+  'hasText',
   {
     prevSubject: true,
   },

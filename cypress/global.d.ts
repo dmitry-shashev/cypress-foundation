@@ -22,7 +22,7 @@ declare global {
         value: string
       ): Chainable<Subject>
       typeInInput(value: string): Chainable<Subject>
-      haveText(value: string | number): Chainable<Subject>
+      hasText(value: string | number): Chainable<Subject>
     }
   }
 }
