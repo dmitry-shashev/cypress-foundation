@@ -37,3 +37,11 @@ tsconfig.json
 .eslintrc.json
 package.json
 ```
+
+#### Control parameters using `package.json`
+
+Example
+
+```bash
+"c:run:headless:local:m": "cross-env CYPRESS_BASE_URL=http://localhost:3000 CYPRESS_SPEC_PATTERN=**/some-folder/**/*.feature cypress run --headless --browser chrome",
+```
