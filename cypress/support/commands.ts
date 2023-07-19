@@ -64,11 +64,10 @@ Cypress.Commands.add(
   (prevSubject, value: string) => {
     const prev = cy.wrap(prevSubject)
     prev.focus()
-    if (!value) {
-      prev.wait(50).clear().wait(50)
-      return
+    prev.clear().wait(50).clear().wait(100)
+    if (value) {
+      prev.type(value)
     }
-    prev.wait(50).clear().wait(50).type(value)
   }
 )
 

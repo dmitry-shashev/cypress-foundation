@@ -5,20 +5,20 @@ declare global {
       clickIfExists(element: string): Chainable<Subject>
       checkTableTextContent(
         selector: string,
-        column: number,
         row: number,
+        column: number,
         value: string
       ): Chainable<Subject>
       checkTableImgAltContent(
         selector: string,
-        column: number,
         row: number,
+        column: number,
         value: string
       ): Chainable<Subject>
       checkTableImgSrcContent(
         selector: string,
-        column: number,
         row: number,
+        column: number,
         value: string
       ): Chainable<Subject>
       typeInInput(value: string): Chainable<Subject>
