@@ -81,3 +81,32 @@ Cypress.Commands.add(
     prev.contains(value)
   }
 )
+
+Cypress.Commands.add(
+  'setCheckbox',
+  {
+    prevSubject: true,
+  },
+  (prevSubject, value: string | number | boolean) => {
+    const prev = cy.wrap(prevSubject)
+    if (value === 'true' || value === true || value === 1) {
+      prev.check()
+    } else {
+      prev.uncheck()
+    }
+  }
+)
+
+Cypress.Commands.add(
+  'textShouldExist',
+  (selector: string, value: string | number) => {
+    cy.get(selector).contains(String(value)).should('exist')
+  }
+)
+
+Cypress.Commands.add(
+  'textShouldNotExist',
+  (selector: string, value: string | number) => {
+    cy.get(selector).contains(String(value)).should('not.exist')
+  }
+)

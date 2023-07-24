@@ -23,6 +23,15 @@ declare global {
       ): Chainable<Subject>
       typeInInput(value: string): Chainable<Subject>
       hasText(value: string | number): Chainable<Subject>
+      setCheckbox(value: string | number | boolean): Chainable<Subject>
+      textShouldExist(
+        selector: string,
+        value: string | number
+      ): Chainable<Subject>
+      textShouldNotExist(
+        selector: string,
+        value: string | number
+      ): Chainable<Subject>
     }
   }
 }
